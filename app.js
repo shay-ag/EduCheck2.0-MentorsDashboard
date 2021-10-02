@@ -1,5 +1,3 @@
-console.log("hello");
-
 const searchBar = document.getElementById("searchBar");
 
 searchBar.addEventListener('keyup', (event) => {
@@ -13,13 +11,16 @@ searchBar.addEventListener('keyup', (event) => {
 
         const txtValue = title[i].textContent || title[i].innerText;
 
-        const card = document.getElementsByClassName("card");
+        const parentcard = document.getElementsByClassName("row");
         
+        const card = parentcard[0].children[i];
+
         if(txtValue.toUpperCase().indexOf(filter) > -1){
-            card[i].style.display = "";
+            card.style.display = "";
         } else{
-            card[i].style.display = "none";
+            card.style.display = "none";
         }
+
     }
     
 });
