@@ -15,6 +15,34 @@ body {
     background-position: top;
 }
 
+.search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-bottom: -20px;
+}
+#searchBar{
+    width: 50vw;
+    height: 48px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+#searchWrapper{
+    position: relative;
+}
+
+.search-icon{
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.search-icon:hover{
+    color: gray;
+}
+
 .header-section {
     background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
     padding: 4rem;
@@ -56,6 +84,14 @@ body {
 }
 
 .title {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0);
+}
+
+.back-title{
     text-transform: uppercase;
     color: white;
     font-size: 1.5rem;
