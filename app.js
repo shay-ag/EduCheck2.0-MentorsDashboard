@@ -1,4 +1,5 @@
 const searchBar = document.getElementById("searchBar");
+const notFound = document.getElementById("notFound");
 
 searchBar.addEventListener('keyup', (event) => {
     const searchedString = event.target.value;
@@ -17,8 +18,11 @@ searchBar.addEventListener('keyup', (event) => {
 
         if(txtValue.toUpperCase().indexOf(filter) > -1){
             card.style.display = "";
+            notFound.innerHTML = "";
+
         } else{
             card.style.display = "none";
+            notFound.innerHTML = "Course is not Available";
         }
 
     }
