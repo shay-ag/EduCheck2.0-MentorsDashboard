@@ -1,7 +1,8 @@
 const searchBar = document.getElementById("searchBar");
-const notFound = document.getElementById("notFound");
+// const notFound = document.getElementById("notFound");
 
 searchBar.addEventListener('keyup', (event) => {
+    var foundCourse = false;
     const searchedString = event.target.value;
 
     const filter = searchedString.toUpperCase();
@@ -17,14 +18,18 @@ searchBar.addEventListener('keyup', (event) => {
         const card = parentcard[0].children[i];
 
         if(txtValue.toUpperCase().indexOf(filter) > -1){
+            foundCourse = true;
             card.style.display = "";
-            notFound.innerHTML = "";
 
         } else{
             card.style.display = "none";
-            notFound.innerHTML = "Course is not Available";
         }
 
+        if (foundCourse === false) {
+            document.querySelector("#notFound").style.display = 'block';
+          } else {
+            document.querySelector("#notFound").style.display = 'none';
+          }
     }
     
 });
